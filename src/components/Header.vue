@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header id="header">
         <section>
             <nav-section />
             <h1>

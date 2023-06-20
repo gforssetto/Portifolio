@@ -1,0 +1,57 @@
+@media( min-width: $mobileSize ) {
+
+    header{
+        background-image: url('../assets/img/protfolio-header.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        height: 50vh;
+        
+        section{
+            width: 100%;
+            width: 100%;
+            background-color: rgba(60,60,60,.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            row-gap: 3vh;
+        }
+
+        h1{
+            color: $colorWhite;
+        }
+        h3{
+            color: $colorMain;
+        }
+    }
+
+    footer{
+        background-color: $colorBlack;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 4vh;
+
+        a{
+            color: $colorGray;
+            font-weight: 600;
+            padding: 2vh;
+            border: 1px solid $colorBlack;
+            border-radius: 15px;
+            box-shadow: 0 0 5px $colorGray;
+        }
+
+        p{
+            color: $colorWhite;
+        }
+
+        span{
+            color: $colorMain;
+        }
+    }
+}
