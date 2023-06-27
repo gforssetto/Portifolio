@@ -1,5 +1,6 @@
 @media( min-width: $mobileSize ) {
 
+    //HEADER START//
     header{
         background-image: url('../assets/img/protfolio-header.jpg');
         background-position: center;
@@ -7,6 +8,10 @@
         background-repeat: no-repeat;
         display: flex;
         height: 50vh;
+
+        nav{
+            display: none;
+        }
         
         section{
             width: 100%;
@@ -18,6 +23,7 @@
             justify-content: center;
             text-align: center;
             row-gap: 3vh;
+            
         }
 
         h1{
@@ -28,6 +34,138 @@
         }
     }
 
+    //HEADER ENDS//
+
+    //MAIN START//
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5vh;
+        padding: 10vh 0;
+
+        article{
+            display: flex;
+            flex-direction: column;
+            row-gap: 1vh;
+
+            h3{
+                color: black;
+            }
+
+            hr{
+                background-color: $colorMain;
+                height: 3px;
+                border: none;
+                box-shadow: 0 0 2px $colorBlack;
+            }
+        }
+        
+    }
+
+    .aboutSection{
+        background-color: gainsboro;
+        text-align: center;
+
+        section{
+            // border: 1px solid $colorWhite;
+            // box-shadow: 0 0 15px $colorBlack;
+            width: 80%;
+            padding: 2vh;
+            // border-radius: 5px;
+            // background-color: rgba(220,220,220,.6);
+        }
+
+        p{
+            font-style: italic;
+            line-height: 1.5;
+        }
+    }
+
+    .skillsSection{
+        background-color: gainsboro;
+
+        > section{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5vh;
+            justify-content: center;
+        }
+
+        aside{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25vh;
+            height: 25vh;
+            border-radius: 50%;
+            box-shadow: 0 0 5px $colorBlack;
+            transition: .4s;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(45deg,darkorange,$colorMain,orange);
+            background-size: 400%;
+            background-position: left;
+            animation: bg-move 20s infinite alternate;
+
+        }
+
+        @keyframes bg-move {
+            to {
+                background-position: left;
+            }
+            from{
+                background-position: right;
+            }
+        }
+
+        h6{
+            font-weight: 600;
+            font-size: 22px;
+        }
+
+        span{
+            font-weight: 600;
+        }
+    }
+
+    .formSection{
+        background-color: gainsboro;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 3vh;
+            width: 80%;
+        }
+
+        select,
+        ::placeholder{
+            color: $colorBlack;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        select,
+        input{
+            width: 50%;
+            padding: 1vh 0;
+            border: none;
+            border-bottom: 2px solid $colorBlack;
+            background-color: transparent;
+        }
+
+        textarea{
+            height: 30vh;
+            border-radius: 5px;
+            border: 2px solid $colorBlack;
+        }
+    }
+
+    //MAIN ENDS//
+
+    //FOOTER START//
     footer{
         background-color: $colorBlack;
         height: 20vh;
@@ -36,14 +174,16 @@
         align-items: center;
         justify-content: center;
         row-gap: 4vh;
+        padding-top: 5vh;
 
         a{
-            color: $colorGray;
+            color: black;
+            background-image: linear-gradient(45deg,darkorange,$colorMain,orange);
             font-weight: 600;
             padding: 2vh;
             border: 1px solid $colorBlack;
             border-radius: 15px;
-            box-shadow: 0 0 5px $colorGray;
+            box-shadow: 0 0 5px black;
         }
 
         p{
@@ -54,4 +194,5 @@
             color: $colorMain;
         }
     }
+    //FOOTER ENDS//
 }

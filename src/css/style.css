@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 300px) {
   header {
     background-image: url("../assets/img/protfolio-header.jpg");
@@ -17,6 +21,9 @@ a {
     background-repeat: no-repeat;
     display: flex;
     height: 50vh;
+  }
+  header nav {
+    display: none;
   }
   header section {
     width: 100%;
@@ -35,6 +42,113 @@ a {
   header h3 {
     color: #FFCB47;
   }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5vh;
+    padding: 10vh 0;
+  }
+  .row article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+  }
+  .row article h3 {
+    color: black;
+  }
+  .row article hr {
+    background-color: #FFCB47;
+    height: 3px;
+    border: none;
+    box-shadow: 0 0 2px #272932;
+  }
+  .aboutSection {
+    background-color: gainsboro;
+    text-align: center;
+  }
+  .aboutSection section {
+    width: 80%;
+    padding: 2vh;
+  }
+  .aboutSection p {
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .skillsSection {
+    background-color: gainsboro;
+  }
+  .skillsSection > section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh;
+    justify-content: center;
+  }
+  .skillsSection aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #272932;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, darkorange, #FFCB47, orange);
+    background-size: 400%;
+    background-position: left;
+    animation: bg-move 20s infinite alternate;
+  }
+  @keyframes bg-move {
+    to {
+      background-position: left;
+    }
+    from {
+      background-position: right;
+    }
+  }
+  .skillsSection h6 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .skillsSection span {
+    font-weight: 600;
+  }
+  .formSection {
+    background-color: gainsboro;
+  }
+  .formSection form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    width: 80%;
+  }
+  .formSection ::-moz-placeholder {
+    color: #272932;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .formSection select,
+  .formSection ::placeholder {
+    color: #272932;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .formSection select,
+  .formSection input {
+    width: 50%;
+    padding: 1vh 0;
+    border: none;
+    border-bottom: 2px solid #272932;
+    background-color: transparent;
+  }
+  .formSection textarea {
+    height: 30vh;
+    border-radius: 5px;
+    border: 2px solid #272932;
+  }
   footer {
     background-color: #272932;
     height: 20vh;
@@ -43,19 +157,159 @@ a {
     align-items: center;
     justify-content: center;
     row-gap: 4vh;
+    padding-top: 5vh;
   }
   footer a {
-    color: #8F857D;
+    color: black;
+    background-image: linear-gradient(45deg, darkorange, #FFCB47, orange);
     font-weight: 600;
     padding: 2vh;
     border: 1px solid #272932;
     border-radius: 15px;
-    box-shadow: 0 0 5px #8F857D;
+    box-shadow: 0 0 5px black;
   }
   footer p {
     color: #FFFBFE;
   }
   footer span {
     color: #FFCB47;
+  }
+}
+@media (min-width: 700px) {
+  header h1 {
+    font-size: 32px;
+  }
+  header h3 {
+    font-size: 22px;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+    background-color: #272932;
+    width: 100%;
+    position: fixed;
+    height: 7vh;
+    z-index: 99;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+    width: 100%;
+  }
+  header nav li {
+    display: flex;
+  }
+  header a {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    transition: 0.4s;
+  }
+  header a:hover {
+    border-color: #FFCB47;
+    letter-spacing: 2px;
+  }
+  .row h3 {
+    font-size: 32px;
+  }
+  .aboutSection p {
+    font-size: 18px;
+  }
+  .skillsSection aside {
+    position: relative;
+    overflow: hidden;
+    justify-content: end;
+    background-image: none;
+    background-color: #272932;
+  }
+  .skillsSection aside:hover {
+    box-shadow: 0 0 20px black;
+    scale: 1.1;
+  }
+  .skillsSection aside:nth-child(1):hover span {
+    height: 90%;
+    color: black;
+  }
+  .skillsSection aside:nth-child(2):hover span {
+    height: 100%;
+    color: black;
+  }
+  .skillsSection aside:nth-child(3):hover span {
+    height: 80%;
+    color: black;
+  }
+  .skillsSection aside:nth-child(4):hover span {
+    height: 90%;
+    color: black;
+  }
+  .skillsSection aside:nth-child(5):hover span {
+    height: 90%;
+    color: black;
+  }
+  .skillsSection h6 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #FFFBFE;
+  }
+  .skillsSection span {
+    transition: 0.6s ease;
+    color: transparent;
+    font-size: 24px;
+    height: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-image: linear-gradient(45deg, darkorange, #FFCB47, orange);
+    background-size: 200%;
+    animation: bg-move 10s infinite alternate;
+  }
+  .formSection form {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+  }
+  .formSection input,
+  .formSection select {
+    width: 45%;
+  }
+  .formSection textarea {
+    width: 100%;
+  }
+  footer {
+    flex-direction: row;
+    -moz-column-gap: 40vh;
+         column-gap: 40vh;
+  }
+  footer a {
+    color: gainsboro;
+    background-size: 400%;
+    background-position: right;
+    background-image: linear-gradient(45deg, darkorange, #FFCB47, orange, transparent 50%);
+    padding: 3vh;
+    box-shadow: 0 0 5px #8F857D;
+    transition: 0.6s ease;
+  }
+  footer a:hover {
+    scale: 0.9;
+    box-shadow: 0 0 5px black;
+    color: black;
+    background-position: left;
+  }
+  @keyframes bg-move {
+    to {
+      background-position: left;
+    }
+    from {
+      background-position: right;
+    }
   }
 }/*# sourceMappingURL=style.css.map */

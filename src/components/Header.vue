@@ -1,7 +1,7 @@
 <template>
     <header id="header">
+        <nav-section />
         <section>
-            <nav-section />
             <h1>
                 Guilherme Forssetto Correa
             </h1>

@@ -1,0 +1,179 @@
+@media( min-width: $tabletSize ){
+    // HEADER START //
+    header{
+               
+        h1{
+            font-size: 32px;
+        }
+
+        h3{
+            font-size: 22px;
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            background-color: $colorBlack;
+            width: 100%;
+            position: fixed;
+            height: 7vh;
+            z-index: 99;
+
+            ul{
+                display: flex;
+                justify-content: center;
+                column-gap: 5vh;
+                width: 100%;
+            }
+
+            li{
+                display: flex;
+            }
+
+        }
+
+        a{
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            transition: .4s;
+
+            &:hover{
+                border-color: $colorMain;
+                letter-spacing: 2px;
+            }
+        }
+
+    }
+    // HEADER ENDS //
+
+    // MAIN START //
+
+    .row{
+
+        h3{
+            font-size: 32px;
+        }
+    }
+
+    .aboutSection{
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    .skillsSection{
+        aside{
+            position: relative;
+            overflow: hidden;
+            justify-content: end;
+            background-image: none;
+            background-color: $colorBlack; 
+            
+            &:hover{
+                box-shadow: 0 0 20px black;
+                scale: 1.1;
+            }
+        }
+
+        aside:nth-child(1):hover span{
+            height: 90%;
+            color: black;
+        }
+        aside:nth-child(2):hover span{
+            height: 100%;
+            color: black;
+        }
+        aside:nth-child(3):hover span{
+            height: 80%;
+            color: black;
+        }
+        aside:nth-child(4):hover span{
+            height: 90%;
+            color: black;
+        }
+        aside:nth-child(5):hover span{
+            height: 90%;
+            color: black;
+        }
+
+        h6{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            color: $colorWhite;
+        }
+
+        span{
+            transition: .6s ease;
+            color: transparent;
+            font-size: 24px;
+            height: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background-image: linear-gradient(45deg,darkorange,$colorMain,orange);
+            background-size: 200%;
+            animation: bg-move 10s infinite alternate;
+        }
+    }
+
+    .formSection{
+        form{
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 5vh;
+        }
+
+        input,
+        select{
+            width: 45%;
+        }
+
+        textarea{
+            width: 100%;
+        }
+    }
+
+    // MAIN ENDS //
+
+    // FOOTER START // 
+    footer{
+        flex-direction: row;
+        column-gap: 40vh;
+
+        a{
+            color: gainsboro;
+            background-size: 400%;
+            background-position: right;
+            background-image: linear-gradient(45deg,darkorange,$colorMain,orange,transparent 50%);
+            padding: 3vh;
+            box-shadow: 0 0 5px $colorGray;
+            transition: .6s ease;
+
+            &:hover{
+                scale: .9;
+                box-shadow: 0 0 5px black;
+                color: black;
+                background-position: left;
+            }
+        }
+    }
+
+    // FOOTER ENDS // 
+
+    @keyframes bg-move {
+        to {
+            background-position: left;
+        }
+        from{
+            background-position: right;
+        }
+    }
+}
