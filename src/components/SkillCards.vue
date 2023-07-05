@@ -1,9 +1,6 @@
 <template>
     <aside>
         <h6>{{ this.title }}</h6>
-        <span>
-            {{ this.number }}
-        </span>
     </aside>
 </template>
 
@@ -12,8 +9,7 @@
 export default {
     name:'SkillCards',
     props:{
-        title:[],
-        number:[]
+        title:[]
     }
 
 }

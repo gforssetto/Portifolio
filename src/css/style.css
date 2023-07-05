@@ -34,13 +34,15 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    row-gap: 3vh;
+    row-gap: 2vh;
   }
   header h1 {
     color: #FFFBFE;
+    font-size: 42px;
   }
   header h3 {
     color: #FFCB47;
+    font-size: 26px;
   }
   .row {
     display: flex;
@@ -56,12 +58,13 @@ html {
   }
   .row article h3 {
     color: black;
+    font-size: 28px;
   }
   .row article hr {
     background-color: #FFCB47;
-    height: 3px;
+    height: 4px;
     border: none;
-    box-shadow: 0 0 2px #272932;
+    box-shadow: 0 0 2px rgb(39, 41, 50);
   }
   .aboutSection {
     background-color: gainsboro;
@@ -81,18 +84,18 @@ html {
   .skillsSection > section {
     display: flex;
     flex-wrap: wrap;
-    gap: 5vh;
+    gap: 1.5vh;
     justify-content: center;
   }
   .skillsSection aside {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 25vh;
-    height: 25vh;
+    width: 10vh;
+    height: 10vh;
     border-radius: 50%;
-    box-shadow: 0 0 5px #272932;
+    box-shadow: 0 0 5px rgb(39, 41, 50);
     transition: 0.4s;
     position: relative;
     overflow: hidden;
@@ -116,6 +119,55 @@ html {
   .skillsSection span {
     font-weight: 600;
   }
+  .projectsSection {
+    background-color: gainsboro;
+  }
+  .projectsSection .Projects-Container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    width: 80%;
+  }
+  .projectsSection .Project-Card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1vh;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+    background-color: rgb(39, 41, 50);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(39, 41, 50);
+  }
+  .projectsSection figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1vh;
+    padding: 2vh;
+  }
+  .projectsSection h4 {
+    font-size: 28px;
+    color: #FFFBFE;
+  }
+  .projectsSection p {
+    color: #FFCB47;
+  }
+  .projectsSection span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+  }
+  .projectsSection a {
+    font-size: 28px;
+    background-color: #FFFBFE;
+    padding: 0.25vh;
+    border-radius: 50%;
+    color: rgb(39, 41, 50);
+    box-shadow: 0 0 5px #FFFBFE;
+  }
   .formSection {
     background-color: gainsboro;
   }
@@ -126,13 +178,13 @@ html {
     width: 80%;
   }
   .formSection ::-moz-placeholder {
-    color: #272932;
+    color: rgb(39, 41, 50);
     font-weight: 600;
     letter-spacing: 1px;
   }
   .formSection select,
   .formSection ::placeholder {
-    color: #272932;
+    color: rgb(39, 41, 50);
     font-weight: 600;
     letter-spacing: 1px;
   }
@@ -141,16 +193,16 @@ html {
     width: 50%;
     padding: 1vh 0;
     border: none;
-    border-bottom: 2px solid #272932;
+    border-bottom: 2px solid rgb(39, 41, 50);
     background-color: transparent;
   }
   .formSection textarea {
     height: 30vh;
     border-radius: 5px;
-    border: 2px solid #272932;
+    border: 2px solid rgb(39, 41, 50);
   }
   footer {
-    background-color: #272932;
+    background-color: rgb(39, 41, 50);
     height: 20vh;
     display: flex;
     flex-direction: column;
@@ -164,7 +216,7 @@ html {
     background-image: linear-gradient(45deg, darkorange, #FFCB47, orange);
     font-weight: 600;
     padding: 2vh;
-    border: 1px solid #272932;
+    border: 1px solid rgb(39, 41, 50);
     border-radius: 15px;
     box-shadow: 0 0 5px black;
   }
@@ -185,7 +237,7 @@ html {
   header nav {
     display: flex;
     align-items: center;
-    background-color: #272932;
+    background-color: rgb(39, 41, 50);
     width: 100%;
     position: fixed;
     height: 7vh;
@@ -218,36 +270,17 @@ html {
   .aboutSection p {
     font-size: 18px;
   }
+  .skillsSection > section {
+    gap: 5vh;
+  }
   .skillsSection aside {
-    position: relative;
-    overflow: hidden;
-    justify-content: end;
-    background-image: none;
-    background-color: #272932;
+    background-color: rgb(39, 41, 50);
+    width: 25vh;
+    height: 25vh;
   }
   .skillsSection aside:hover {
-    box-shadow: 0 0 20px black;
-    scale: 1.1;
-  }
-  .skillsSection aside:nth-child(1):hover span {
-    height: 90%;
-    color: black;
-  }
-  .skillsSection aside:nth-child(2):hover span {
-    height: 100%;
-    color: black;
-  }
-  .skillsSection aside:nth-child(3):hover span {
-    height: 80%;
-    color: black;
-  }
-  .skillsSection aside:nth-child(4):hover span {
-    height: 90%;
-    color: black;
-  }
-  .skillsSection aside:nth-child(5):hover span {
-    height: 90%;
-    color: black;
+    box-shadow: 0 0 15px black;
+    scale: 1.05;
   }
   .skillsSection h6 {
     height: 100%;
@@ -256,19 +289,56 @@ html {
     font-size: 28px;
     color: #FFFBFE;
   }
-  .skillsSection span {
-    transition: 0.6s ease;
-    color: transparent;
-    font-size: 24px;
-    height: 0;
+  .projectsSection .Projects-Container {
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 5vh;
+  }
+  .projectsSection .Project-Card {
+    width: 30%;
+    padding: 0;
+    row-gap: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.5s ease;
+  }
+  .projectsSection .Project-Card:hover figcaption {
+    height: 100%;
+    bottom: 0;
+    row-gap: 5vh;
+  }
+  .projectsSection .Project-Card:hover {
+    scale: 1.05;
+    box-shadow: 0 0 25px rgb(39, 41, 50);
+  }
+  .projectsSection figcaption {
+    row-gap: 0;
+    padding: 0;
+    width: 100%;
+    height: 0;
     position: absolute;
-    background-image: linear-gradient(45deg, darkorange, #FFCB47, orange);
-    background-size: 200%;
-    animation: bg-move 10s infinite alternate;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(39, 41, 50, 0.9);
+    transition: 0.5s ease;
+    justify-content: center;
+    bottom: -5vh;
+  }
+  .projectsSection a {
+    transition: 0.4s ease;
+    font-size: 42px;
+    padding: 0.5vh;
+  }
+  .projectsSection a:hover {
+    background-color: #FFCB47;
+    box-shadow: 0 0 15px #FFCB47;
+    scale: 0.9;
   }
   .formSection form {
     flex-wrap: wrap;

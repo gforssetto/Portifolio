@@ -22,15 +22,17 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            row-gap: 3vh;
+            row-gap: 2vh;
             
         }
 
         h1{
             color: $colorWhite;
+            font-size: 42px;
         }
         h3{
             color: $colorMain;
+            font-size: 26px;
         }
     }
 
@@ -51,11 +53,12 @@
 
             h3{
                 color: black;
+                font-size: 28px;
             }
 
             hr{
                 background-color: $colorMain;
-                height: 3px;
+                height: 4px;
                 border: none;
                 box-shadow: 0 0 2px $colorBlack;
             }
@@ -88,17 +91,17 @@
         > section{
             display: flex;
             flex-wrap: wrap;
-            gap: 5vh;
+            gap: 1.5vh;
             justify-content: center;
         }
 
         aside{
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            width: 25vh;
-            height: 25vh;
+            width: 10vh;
+            height: 10vh;
             border-radius: 50%;
             box-shadow: 0 0 5px $colorBlack;
             transition: .4s;
@@ -127,6 +130,59 @@
 
         span{
             font-weight: 600;
+        }
+    }
+
+    .projectsSection{
+        background-color: gainsboro;
+
+        .Projects-Container{
+            display: flex;
+            flex-direction: column;
+            row-gap: 4vh;
+            width: 80%;
+        }
+
+        .Project-Card{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            row-gap: 1vh;
+            column-gap: 5vh;
+            background-color: $colorBlack;
+            border-radius: 10px;
+            box-shadow: 0 0 15px $colorBlack;
+        }
+
+        figcaption{
+            display: flex;
+            flex-direction: column;
+            // flex-wrap: wrap;
+            align-items: center;
+            row-gap: 1vh;
+            padding: 2vh;
+        }
+
+        h4 {
+            font-size: 28px;
+            color: $colorWhite;
+        }
+        p{
+            color: $colorMain;
+        }
+        span{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            column-gap: 5vh;
+        }
+        a{
+            font-size: 28px;
+            background-color: $colorWhite;
+            padding: .25vh;
+            border-radius: 50%;
+            color: $colorBlack;
+            box-shadow: 0 0 5px $colorWhite;
         }
     }
 

@@ -3,7 +3,7 @@
     <HeaderSection />
     <AboutSection />
     <SkillSections />
-    <!-- <ProjectsSection/> -->
+    <ProjectsSection/>
     <ContactForm />
     <FooterSection />
   </div>
@@ -14,7 +14,7 @@ import AboutSection from './components/AboutSection.vue'
 import ContactForm from './components/ContactForm.vue'
 import FooterSection from './components/Footer.vue'
 import HeaderSection from './components/Header.vue'
-// import ProjectsSection from './components/ProjectsSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
 import SkillSections from './components/SkillSections.vue'
 
 export default {
@@ -25,7 +25,7 @@ export default {
     SkillSections,
     AboutSection,
     ContactForm,
-    // ProjectsSection
+    ProjectsSection
   }
 
 }

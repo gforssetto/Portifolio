@@ -65,38 +65,20 @@
     }
 
     .skillsSection{
-        aside{
-            position: relative;
-            overflow: hidden;
-            justify-content: end;
-            background-image: none;
-            background-color: $colorBlack; 
-            
-            &:hover{
-                box-shadow: 0 0 20px black;
-                scale: 1.1;
-            }
+
+        > section{
+            gap: 5vh;
         }
 
-        aside:nth-child(1):hover span{
-            height: 90%;
-            color: black;
-        }
-        aside:nth-child(2):hover span{
-            height: 100%;
-            color: black;
-        }
-        aside:nth-child(3):hover span{
-            height: 80%;
-            color: black;
-        }
-        aside:nth-child(4):hover span{
-            height: 90%;
-            color: black;
-        }
-        aside:nth-child(5):hover span{
-            height: 90%;
-            color: black;
+        aside{
+            background-color: $colorBlack; 
+            width: 25vh;
+            height: 25vh;
+            
+            &:hover{
+                box-shadow: 0 0 15px black;
+                scale: 1.05;
+            }
         }
 
         h6{
@@ -107,23 +89,73 @@
             color: $colorWhite;
         }
 
-        span{
-            transition: .6s ease;
-            color: transparent;
-            font-size: 24px;
-            height: 0;
+    }
+
+    .projectsSection{
+        
+        .Projects-Container{
             width: 100%;
             display: flex;
-            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
-            position: absolute;
-            background-image: linear-gradient(45deg,darkorange,$colorMain,orange);
-            background-size: 200%;
-            animation: bg-move 10s infinite alternate;
+            gap: 5vh;
         }
+
+        .Project-Card{
+            width: 30%;
+            padding: 0;
+            row-gap: 0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            transition: .5s ease;
+            &:hover figcaption{
+                height: 100%;
+                bottom: 0;
+                row-gap: 5vh;
+
+            }
+
+            &:hover{
+                scale: 1.05;
+                box-shadow: 0 0 25px $colorBlack;
+            }
+           
+        }
+        
+        figcaption{
+            row-gap: 0;
+            padding: 0;
+            width: 100%;
+            height: 0;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(39, 41, 50, .9);
+            transition: .5s ease;
+            justify-content: center;
+            bottom: -5vh;
+
+        }
+        a{
+            transition: .4s ease;
+            font-size: 42px;
+            padding: .5vh;
+
+            &:hover{
+                background-color: $colorMain;
+                box-shadow:0 0 15px $colorMain;
+                scale: .9;
+            }
+        }
+
     }
 
     .formSection{
+
         form{
             flex-wrap: wrap;
             flex-direction: row;

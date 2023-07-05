@@ -2,11 +2,13 @@
 <section class="skillsSection row" id="skills">
     <SectionTitle :title="'Skills'"/>
     <section>
-        <skill-cards :title="'CSS'" :number="'90%'"/>
-        <skill-cards :title="'HTML'" :number="'100%'"/>
-        <skill-cards :title="'JS'" :number="'80%'"/>
-        <skill-cards :title="'PHP'" :number="'90%'"/>
-        <skill-cards :title="'SQL'" :number="'90%'"/>
+        <skill-cards :title="'CSS'" />
+        <skill-cards :title="'HTML'"/>
+        <skill-cards :title="'JS'" />
+        <skill-cards :title="'vue.JS'"/>
+        <skill-cards :title="'React'" />
+        <skill-cards :title="'PHP'" />
+        <skill-cards :title="'SQL'" />
     </section>
 </section>
 </template>
