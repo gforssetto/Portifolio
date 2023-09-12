@@ -13,9 +13,9 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 280px) {
   header {
-    background-image: url("/img/protfolio-header.jpg");
+    background-image: url("/public/img/protfolio-header.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
