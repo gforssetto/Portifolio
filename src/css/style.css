@@ -39,10 +39,12 @@ html {
   header h1 {
     color: #FFFBFE;
     font-size: 42px;
+    text-shadow: 0 0 25px black;
   }
   header h3 {
     color: #FFCB47;
     font-size: 26px;
+    text-shadow: 0 0 25px black;
   }
   .row {
     display: flex;
@@ -139,12 +141,15 @@ html {
     border-radius: 10px;
     box-shadow: 0 0 15px rgb(39, 41, 50);
   }
+  .projectsSection img {
+    display: none;
+  }
   .projectsSection figcaption {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 1vh;
-    padding: 2vh;
+    row-gap: 3vh;
+    padding: 4vh 0;
   }
   .projectsSection h4 {
     font-size: 28px;
@@ -298,7 +303,8 @@ html {
     gap: 5vh;
   }
   .projectsSection .Project-Card {
-    width: 30%;
+    width: 45%;
+    height: 45vh;
     padding: 0;
     row-gap: 0;
     position: relative;
@@ -307,6 +313,7 @@ html {
     flex-direction: column;
     justify-content: end;
     transition: 0.5s ease;
+    justify-content: start;
   }
   .projectsSection .Project-Card:hover figcaption {
     height: 100%;
@@ -316,6 +323,9 @@ html {
   .projectsSection .Project-Card:hover {
     scale: 1.05;
     box-shadow: 0 0 25px rgb(39, 41, 50);
+  }
+  .projectsSection img {
+    display: flex;
   }
   .projectsSection figcaption {
     row-gap: 0;
@@ -328,7 +338,7 @@ html {
     background-color: rgba(39, 41, 50, 0.9);
     transition: 0.5s ease;
     justify-content: center;
-    bottom: -5vh;
+    bottom: -15vh;
   }
   .projectsSection a {
     transition: 0.4s ease;
@@ -381,5 +391,17 @@ html {
     from {
       background-position: right;
     }
+  }
+}
+@media (min-width: 1000px) {
+  header h1 {
+    font-size: 50px;
+  }
+  header h3 {
+    font-size: 38px;
+  }
+  .projectsSection .Project-Card {
+    width: 30%;
+    height: 50vh;
   }
 }/*# sourceMappingURL=style.css.map */

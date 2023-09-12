@@ -29,10 +29,12 @@
         h1{
             color: $colorWhite;
             font-size: 42px;
+            text-shadow: 0 0 25px black;
         }
         h3{
             color: $colorMain;
             font-size: 26px;
+            text-shadow: 0 0 25px black;
         }
     }
 
@@ -154,13 +156,17 @@
             box-shadow: 0 0 15px $colorBlack;
         }
 
+        img{
+            display: none;
+        }
+
         figcaption{
             display: flex;
             flex-direction: column;
             // flex-wrap: wrap;
             align-items: center;
-            row-gap: 1vh;
-            padding: 2vh;
+            row-gap: 3vh;
+            padding: 4vh 0;
         }
 
         h4 {
